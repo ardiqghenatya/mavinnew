@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // **********************************************************************// 
 // ! Remove Default STYLES
 // **********************************************************************//
@@ -807,10 +807,10 @@ if(!function_exists('etheme_account_sidebar')) {
 // **********************************************************************//  
 
 add_action('after_page_wrapper', 'etheme_search_form_modal');
-if(!function_exists('etheme_search_form_modal')) {
+//if(!function_exists('etheme_search_form_modal')) {
 	function etheme_search_form_modal() {
 		?>
-			<div id="searchModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+			<div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="height:200px">
 				<div>
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -824,7 +824,7 @@ if(!function_exists('etheme_search_form_modal')) {
 			</div>
 		<?php
 	}
-}
+//}
 // **********************************************************************// 
 // ! Login form popup
 // **********************************************************************//  
@@ -834,7 +834,7 @@ if(!function_exists('etheme_login_form_modal')) {
 	function etheme_login_form_modal() {
 		global $woocommerce;
 		?>
-			<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+			<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 				<div>
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -928,7 +928,7 @@ if(!function_exists('etheme_top_cart')) {
 
 			<div class="shopping-cart-widget a-right" <?php if(etheme_get_option('favicon_badge')) echo 'data-fav-badge="enable"' ?>>
 				<div class="cart-summ" data-items-count="<?php echo $woocommerce->cart->cart_contents_count; ?>">
-					<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><img src="../wp-content/themes/legenda/framework/dT6ao7obc-copy-90x90.png" alt="" style="width:20px;height:20px;"></a>
+					<a style="padding-left: 0px; padding-bottom: 0px;" href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><img src="./wp-content/themes/legenda/framework/dT6ao7obc-copy-90x90.png" alt="" style="width:20px;height:20px;"></a>
 				</div>
 			    <div class="cart-popup-container">
 				    <div class="cart-popup">

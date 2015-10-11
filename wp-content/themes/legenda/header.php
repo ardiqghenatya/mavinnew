@@ -37,7 +37,32 @@
 
 			wp_head();
 		?>
-        
+        <link rel="stylesheet" type="text/css" href="./wp-content/themes/legenda/framework/css/bootstrap.min.css">
+		<style>
+			.fa {
+				transform: scale(1.5,1.5);
+				cursor:pointer
+			}
+			.archangemenu:hover{
+			}
+			a{
+				color:black;
+			}
+			.main-nav .menu > li > a{
+				text-decoration:none;
+				border-bottom:solid transparent;
+			}
+			.main-nav .menu > li > a:hover{
+				border-bottom:solid darkgrey;
+				text-decoration:none;
+			}
+			.main-nav .menu > li.current_page_item > a{
+				border-bottom:solid black;
+			}
+			.shopping-cart-widget .cart-popup {
+				right: -30px;
+			}
+		</style>
 </head>
 <body <?php body_class(); ?>>
 	<?php if(etheme_get_option('mobile_loader')): ?>
@@ -155,11 +180,7 @@
 							<div class="show-top-panel hidden-phone"></div>
 						<?php endif ?>
 						
-						<?php if (etheme_get_option('search_form')): ?>
-							<div class="search hide-input a-right">
-								<span data-toggle="modal" data-target="#searchModal" class="search-link">search</span>
-							</div>
-						<?php endif ?>
+						
 
 						<?php if (class_exists('Woocommerce')): ?>
                         	<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" class="shopping-cart-link" ><span><?php _e('Cart', ETHEME_DOMAIN) ?></span><span class="price-summ cart-totals"><?php echo $woocommerce->cart->get_cart_subtotal(); ?></span></a>
@@ -170,25 +191,46 @@
 						<?php if (is_user_logged_in() && etheme_get_option('top_links')): ?>
 							<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="my-account-link hidden-desktop">&nbsp;</a>
 						<?php elseif(etheme_get_option('top_links')): ?>
-							<a href="#" data-toggle="modal" data-target="#loginModal" class="my-account-link hidden-tablet hidden-desktop">&nbsp;</a>
+							<a href="#" data-toggle="modal" data-target="#loginModal" class="my-account-link hidden-desktop">&nbsp;</a>
 						<?php endif ?>
 
 
 
 						<?php if (etheme_get_option('top_links')): ?>
-							<div class="top-links hidden-phone a-center">
+							<div class="top-links hidden-phone hidden-tablet hidden-desktop">
 								<?php etheme_top_links(); ?>
 							</div>
 						<?php endif ?>
 
-						<?php if (class_exists('YITH_WCWL') && etheme_get_option('wishlist_link')): $wl = new YITH_WCWL(array());?>
-							<div class="fl-r wishlist-link">
-								<a href="<?php echo $wl->get_wishlist_url(); ?>"><i class="icon-heart-empty"></i><span><?php _e('Wishlist', ETHEME_DOMAIN) ?></span></a>
-							</div>
-						<?php endif ?>
+						
+						<!--
 						<?php if(etheme_get_option('right_panel')): ?>
 							<div class="side-area-icon hidden-phone hidden-tablet"><i class="icon-reorder"></i></div>
 						<?php endif; ?>
+						-->
+						<div class="right" style="padding-top:5px">
+						<span>
+							<a class="hidden-desktop" style="padding-left: 0px; padding-bottom: 0px;" href="http://localhost/web4oct15/?page_id=7"><img src="./wp-content/themes/legenda/framework/dT6ao7obc-copy-90x90.png" alt="" style="width:20px;height:20px;"></a>
+						</span>				
+						<?php if (class_exists('YITH_WCWL') && etheme_get_option('wishlist_link')): $wl = new YITH_WCWL(array());?>
+							<span class="wishlist-link hidden-tablet">
+								<a href="<?php echo $wl->get_wishlist_url(); ?>"><i class="icon-heart-empty"></i><span><?php _e('Wishlist', ETHEME_DOMAIN) ?></span></a>
+							</span>
+						<?php endif ?>
+						<span>
+							<div class="hidden-desktop" style="margin-right:10px;margin-left:10px">
+								<a href="http://localhost/web4oct15/?page_id=166&amp;wishlist-action=view"><i style="color:grey" class="fa fa-heart-o"></i><span></span></a>
+							</div>
+						</span>
+						<span><a class="hidden-desktop hidden-phone" href="/web4oct15/?page_id=2038" style="margin-right:5px;margin-left:0px; color:grey"><i style="color:grey" class="fa fa-book"></i> Guide</a></span>
+						<span><a class="hidden-desktop hidden-tablet" href="/web4oct15/?page_id=2038" style="margin-right:5px;margin-left:0px"><i style="color:grey" class="fa fa-book"></i></a></span>
+						<span><a class="hidden-desktop hidden-phone" href="/web4oct15/?page_id=9" style="margin-right:5px;margin-left:5px"><i style="color:grey" class="fa fa-sign-in"></i></a></span>
+						<span><a class="hidden-desktop" data-toggle="modal" data-target="#searchModal" style="margin-right:15px;margin-left:10px"><i style="color:grey" class="fa fa-search"></i></a></span>
+						<span>
+						
+						</span>
+						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -197,28 +239,36 @@
 		<header class="header header<?php echo $ht; ?>">
 			
 			<div class="container">
-				<div class="table-row">
+				<div class="col-md-12">
+					<div class="col-md-4 hidden-phone hidden-tablet" style="text-align:left; padding-left:40px;padding-top:2.5%">
+						<a class="archangemenu hidden-phone hidden-tablet" href="/web4oct15/?page_id=9">Log in</a>
+						<br/>
+						<a class="archangemenu hidden-phone hidden-tablet" href="/web4oct15/?page_id=2038"> Guide</a>						
+					</div>
+					<div class="col-md-4 hidden-tablet">
+						<div class="logo"><?php etheme_logo(); ?></div>
+					</div>
+					<div class="logo hidden-desktop hidden-phone" style="padding-left:40%"><?php etheme_logo(); ?></div>
+					<div class="col-md-4 hidden-phone hidden-tablet">
+						<div class="col-md-12">
+							<div class="col-md-7">
+							
+							</div>
+							<div class="col-md-5 hidden-phone hidden-tablet" style="padding-top:12.5%">
+								<div class="col-md-6" style="padding-top:2px">
+									<span data-toggle="modal" data-target="#searchModal" class="fa fa-search"></span>
+								</div>
+								<div class="col-md-6">
+								<?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
+								<?php etheme_top_cart(); ?>
+								<?php endif ;?>
+								</div>
+							</div>
 
-    				<?php if (etheme_get_option('search_form')): ?>
-    					<div class="search search-left hidden-phone hidden-tablet a-left">
-								<?php echo etheme_search(array()); ?>
-    					</div>
-    				<?php endif ?>
-                    
-					<div class="logo"><?php etheme_logo(); ?></div>
-
-					<?php if (etheme_get_option('search_form')): ?>
-						<div class="search search-center hidden-phone hidden-tablet">
-							<div class="site-description hidden-phone hidden-tablet"><?php bloginfo( 'description' ); ?></div>
-								<?php echo etheme_search(array()); ?>
-						</div>
-					<?php endif ?>
-
-		            <?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
-	                    <?php etheme_top_cart(); ?>
-		            <?php endif ;?> 
-					<div class="menu-icon hidden-desktop"><i class="icon-reorder"></i></div>
+						</div>			
+					</div>
 				</div>
+				<div class="menu-icon hidden-desktop"><i class="icon-reorder"></i></div>
 			</div>
 
 		</header>
