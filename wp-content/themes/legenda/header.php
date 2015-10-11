@@ -1,6 +1,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+<link rel="stylesheet" type="text/css" href="./wp-content/themes/legenda/framework/css/bootstrap.min.css">
     <?php global $etheme_responsive, $woocommerce;; ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
     <?php if($etheme_responsive): ?>
@@ -37,7 +38,7 @@
 
 			wp_head();
 		?>
-        <link rel="stylesheet" type="text/css" href="./wp-content/themes/legenda/framework/css/bootstrap.min.css">
+        
 		<style>
 			.fa {
 				transform: scale(1.5,1.5);
