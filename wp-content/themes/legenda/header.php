@@ -1,6 +1,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+<link rel="stylesheet" type="text/css" href="./wp-content/themes/legenda/framework/css/bootstrap.min.css">
     <?php global $etheme_responsive, $woocommerce;; ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
     <?php if($etheme_responsive): ?>
@@ -37,7 +38,7 @@
 
 			wp_head();
 		?>
-        <link rel="stylesheet" type="text/css" href="./wp-content/themes/legenda/framework/css/bootstrap.min.css">
+        
 		<style>
 			.fa {
 				transform: scale(1.5,1.5);
@@ -210,7 +211,7 @@
 						-->
 						<div class="right" style="padding-top:5px">
 						<span>
-							<a class="hidden-desktop" style="padding-left: 0px; padding-bottom: 0px;" href="http://localhost/web4oct15/?page_id=7"><img src="./wp-content/themes/legenda/framework/dT6ao7obc-copy-90x90.png" alt="" style="width:20px;height:20px;"></a>
+							<a class="hidden-desktop" style="padding-left: 0px; padding-bottom: 0px;" href="./?page_id=7"><img src="./wp-content/themes/legenda/framework/dT6ao7obc-copy-90x90.png" alt="" style="width:20px;height:20px;"></a>
 						</span>				
 						<?php if (class_exists('YITH_WCWL') && etheme_get_option('wishlist_link')): $wl = new YITH_WCWL(array());?>
 							<span class="wishlist-link hidden-tablet">
@@ -219,12 +220,12 @@
 						<?php endif ?>
 						<span>
 							<div class="hidden-desktop" style="margin-right:10px;margin-left:10px">
-								<a href="http://localhost/web4oct15/?page_id=166&amp;wishlist-action=view"><i style="color:grey" class="fa fa-heart-o"></i><span></span></a>
+								<a href="./?page_id=166&amp;wishlist-action=view"><i style="color:grey" class="fa fa-heart-o"></i><span></span></a>
 							</div>
 						</span>
-						<span><a class="hidden-desktop hidden-phone" href="/web4oct15/?page_id=2038" style="margin-right:5px;margin-left:0px; color:grey"><i style="color:grey" class="fa fa-book"></i> Guide</a></span>
-						<span><a class="hidden-desktop hidden-tablet" href="/web4oct15/?page_id=2038" style="margin-right:5px;margin-left:0px"><i style="color:grey" class="fa fa-book"></i></a></span>
-						<span><a class="hidden-desktop hidden-phone" href="/web4oct15/?page_id=9" style="margin-right:5px;margin-left:5px"><i style="color:grey" class="fa fa-sign-in"></i></a></span>
+						<span><a class="hidden-desktop hidden-phone" href="./?page_id=2038" style="margin-right:5px;margin-left:0px; color:grey"><i style="color:grey" class="fa fa-book"></i> Guide</a></span>
+						<span><a class="hidden-desktop hidden-tablet" href="./?page_id=2038" style="margin-right:5px;margin-left:0px"><i style="color:grey" class="fa fa-book"></i></a></span>
+						<span><a class="hidden-desktop hidden-phone" href="./?page_id=9" style="margin-right:5px;margin-left:5px"><i style="color:grey" class="fa fa-sign-in"></i></a></span>
 						<span><a class="hidden-desktop" data-toggle="modal" data-target="#searchModal" style="margin-right:15px;margin-left:10px"><i style="color:grey" class="fa fa-search"></i></a></span>
 						<span>
 						
@@ -241,9 +242,9 @@
 			<div class="container">
 				<div class="col-md-12">
 					<div class="col-md-4 hidden-phone hidden-tablet" style="text-align:left; padding-left:40px;padding-top:2.5%">
-						<a class="archangemenu hidden-phone hidden-tablet" href="/web4oct15/?page_id=9">Log in</a>
+						<a class="archangemenu hidden-phone hidden-tablet" href="./?page_id=9">Log in</a>
 						<br/>
-						<a class="archangemenu hidden-phone hidden-tablet" href="/web4oct15/?page_id=2038"> Guide</a>						
+						<a class="archangemenu hidden-phone hidden-tablet" href="./?page_id=2038"> Guide</a>						
 					</div>
 					<div class="col-md-4 hidden-tablet">
 						<div class="logo"><?php etheme_logo(); ?></div>
