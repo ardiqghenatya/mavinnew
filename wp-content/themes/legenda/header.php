@@ -256,10 +256,11 @@
 							
 							</div>
 							<div class="col-md-5 hidden-phone hidden-tablet" style="padding-top:12.5%">
-								<div class="col-md-6" style="padding-top:2px">
+								<div class="col-md-4" style="padding:0px;padding-top:2px">
 									<span data-toggle="modal" data-target="#searchModal" class="fa fa-search"></span>
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-1" style="width: 3px; height: 25px; background: black;padding:0px;margin-left:6px"></div>
+								<div class="col-md-6" style="padding:0px">
 								<?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
 								<?php etheme_top_cart(); ?>
 								<?php endif ;?>
